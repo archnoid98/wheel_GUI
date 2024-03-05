@@ -1,0 +1,8 @@
+prefix=/home/archnoid/running_ws/devel
+
+Name: command_pkg
+Description: Description of command_pkg
+Version: 0.0.0
+Cflags: -I/home/archnoid/running_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

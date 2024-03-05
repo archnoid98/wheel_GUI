@@ -1,0 +1,9 @@
+<launch>
+
+    <node name='COMMANDER' pkg='command_pkg' type='commander.py' output='screen'/>
+
+    <node name='WORKER' pkg='command_pkg' type='publisher.py' output='screen'/>
+
+    <node name='PATHACCHI' pkg='command_pkg' type='tkinter_gui.py' output='screen'/>
+    
+</launch>
