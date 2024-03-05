@@ -1,5 +1,5 @@
 # wheel_GUI_marsRovers
-here are 3 .py files
+here are 3 (.py) files
 where : tikinter_gui.py has the GUI code 
 
 here we used a custom msg sermon.msg : consists of int & string
