@@ -41,6 +41,19 @@ def button_clicked(position):
 def scaling(position):
     main_message.speed = position
 
+def key_press(event):
+    key = event.keysym
+    if key == 'w':
+        button_clicked("FORWARD")
+    elif key == 's':
+        button_clicked("STOP")
+    elif key == 'x':
+        button_clicked("BACKWARD")
+    elif key == 'a':
+        button_clicked("LEFT")
+    elif key == 'd':
+        button_clicked("RIGHT")
+
 def buttonGui():
     window = tk.Tk()
     window.geometry('575x403')
@@ -107,8 +120,6 @@ def buttonGui():
         dynamic_label.config(text=information)
         speed_label.config(text=f'Speed = {main_message.speed}')
         window.after(100, update_dynamic_label)  # Schedule the update after 100 milliseconds
-       
-        
 
     # Buttons
     top_button = tk.Button(
@@ -213,6 +224,9 @@ def buttonGui():
     right_button.grid(row=2, column=2)
 
     window.after(100, update_dynamic_label)  # Schedule the initial update
+
+    # Bind key presses to the key_press function
+    window.bind('<Key>', key_press)
 
     window.mainloop()
 
